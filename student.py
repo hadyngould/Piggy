@@ -68,6 +68,13 @@ class Piggy(PiggyParent):
         """ Does a 360 distance check and returns true if safe """
         pass
 
+        for x in range(3):
+            self.shake()
+
+    def shake(self):
+        self. deg_fwd(720)
+        slef.stop()
+
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
         self.right() # start rotating right
