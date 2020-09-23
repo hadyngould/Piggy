@@ -63,6 +63,10 @@ class Piggy(PiggyParent):
         self.fwd()
         time.sleep(2)
         self.stop()
+
+        self.backward()
+        time.sleep(2)
+        self.stop()
         
         for x in range(3):
             self.example_move()
