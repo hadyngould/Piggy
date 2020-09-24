@@ -61,12 +61,21 @@ class Piggy(PiggyParent):
         # TODO: check to see if it's safe before dancing
 
         self.right_twist()
+        self.left_twist()
 
     def right_twist(self):
         self.turn_by_deg(90)
         time.sleep(.1)
         self.stop()
         self.turn_by_deg(180)
+        time.sleep(.1)
+        self.stop()
+
+    def left_twist(self):
+        self.turn_by_deg(180)
+        time.sleep(.1)
+        self.stop()
+        self.turn_by_deg(360)
         time.sleep(.1)
         self.stop()
        
