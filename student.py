@@ -63,6 +63,12 @@ class Piggy(PiggyParent):
         self.right(primary=50, counter=-50)
         time.sleep(2)
         self.stop()
+        self.fwd()
+        time.sleep(1)
+        self.stop()
+        self.back()
+        time.sleep()
+        self.stop()
 
        
         
