@@ -70,15 +70,15 @@ class Piggy(PiggyParent):
         self.turn_by_deg(90)
         time.sleep(.1)
         self.stop()
-        self.turn_by_deg(180)
+        self.turn_by_deg(90)
         time.sleep(.1)
         self.stop()
 
     def left_twist(self):
-        self.turn_by_deg(-179)
+        self.turn_by_deg(-90)
         time.sleep(.1)
         self.stop()
-        self.turn_by_deg(-179)
+        self.turn_by_deg(-90)
         time.sleep(.1)
         self.stop()
        
