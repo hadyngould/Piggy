@@ -59,6 +59,7 @@ class Piggy(PiggyParent):
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
+    for x in range(3):
         self.fwd()
         time.sleep(2)
         self.right_twist()
@@ -67,6 +68,7 @@ class Piggy(PiggyParent):
         self.left_twist()
 
     def right_twist(self):
+         """The robot turns in a right circle once"""
         self.turn_by_deg(180)
        #time.sleep(.1)
         self.stop()
@@ -75,12 +77,15 @@ class Piggy(PiggyParent):
         self.stop()
 
     def left_twist(self):
+         """Robot turns in a circle once to the left"""
         self.turn_by_deg(-179)
         #time.sleep(.1)
         self.stop()
         self.turn_by_deg(-179)
         #time.sleep(.1)
         self.stop()
+
+    
        
         
       
