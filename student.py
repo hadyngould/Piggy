@@ -66,11 +66,11 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(2)
             self.right_twist()
-            self.servo(1000)
             self.fwd()
-            time.sleep(3)
-            self.left_twist()
             self.servo(1000)
+            time.sleep(1.5)
+            self.servo(2000)
+            self.left_twist()
 
     def right_twist(self):
         """The robot turns in a right circle once"""
