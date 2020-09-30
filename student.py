@@ -98,10 +98,12 @@ class Piggy(PiggyParent):
         self.servo(1500)
 
     def backward_shimmey(self):
-        self.right(primary=-60, counter=-40)
-        time.sleep(.1)
-        self.left(primary=-60, counter=-40)
-        time.sleep(.1)
+        for x in range(6):
+            self.right(primary=-60, counter=-40)
+            time.sleep(.1)
+            self.left(primary=-60, counter=-40)
+            time.sleep(.1)
+        self.stop()
 
 
     
