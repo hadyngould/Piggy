@@ -99,9 +99,9 @@ class Piggy(PiggyParent):
 
     def backward_shimmey(self):
         self.right(primary=-60, counter=-40)
-        time.sleep()
+        time.sleep(.1)
         self.left(primary=-60, counter=-40)
-        time.sleep()
+        time.sleep(.1)
 
 
     
