@@ -62,14 +62,10 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return false # SHUT THE DANCE DOWN
         
-        for x in range(3):
-            self.fwd()
-            time.sleep(2)
+        for x in range(1):
+            self.strut()
             self.right_twist()
-            self.fwd()
-            self.servo(1000)
-            time.sleep(1.5)
-            self.servo(2000)
+            self.strut()
             self.left_twist()
 
     def right_twist(self):
@@ -89,6 +85,12 @@ class Piggy(PiggyParent):
         self.turn_by_deg(-179)
         #time.sleep(.1)
         self.stop()
+
+    def strut(self):
+        self.fwd()
+        self.servo(1000) 
+        time.sleep(1)
+        self.servo(2000)
 
     
        
