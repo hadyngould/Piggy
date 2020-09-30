@@ -89,8 +89,10 @@ class Piggy(PiggyParent):
     def strut(self):
         self.fwd()
         self.servo(1000) 
+        self.servo(1500)
         time.sleep(1)
         self.servo(2000)
+        self.servo(1500)
 
     
        
