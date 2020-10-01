@@ -69,7 +69,7 @@ class Piggy(PiggyParent):
             self.left_twist()
             self.backward_shimmey()
             self.spinarama()
-            self.forward_shimmey()
+            self.foward_shimmey()
 
     def right_twist(self):
         """The robot turns in a right circle once"""
