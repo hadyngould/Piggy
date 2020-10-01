@@ -116,12 +116,15 @@ class Piggy(PiggyParent):
         self.stop()
 
     def foward_shimmey(self):
-         for x in range(6):
+        for x in range(6):
             self.right(primary=60, counter=30)
             time.sleep(.5)
             self.left(primary=70, counter=30)
             time.sleep(.5)
-         self.stop()
+        self.back()
+        time.sleep(2)        
+        self.stop()
+
 
        
         
