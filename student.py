@@ -62,12 +62,13 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return false # SHUT THE DANCE DOWN
         
-        for x in range(2):
+        for x in range(1):
             self.strut()
             self.right_twist()
             self.strut()
             self.left_twist()
             self.backward_shimmey()
+            self.spinarama()
 
     def right_twist(self):
         """The robot turns in a right circle once"""
@@ -89,13 +90,14 @@ class Piggy(PiggyParent):
 
     def strut(self):
         self.fwd()
-        self.servo(1000)
-        time.sleep(.1) 
-        self.servo(1500)
-        time.sleep(1)
-        self.servo(2000)
-        time.sleep(.1)
-        self.servo(1500)
+        for x in range(2):
+            self.servo(1000)
+            time.sleep(.1) 
+            self.servo(1500)
+            time.sleep(1)
+            self.servo(2000)
+            time.sleep(.1)
+            self.servo(1500)
 
     def backward_shimmey(self):
         for x in range(6):
@@ -104,6 +106,9 @@ class Piggy(PiggyParent):
             self.left(primary=-70, counter=-30)
             time.sleep(.5)
         self.stop()
+
+    def spinarama(self):
+        self.right(primary=-70, counter=-30)
 
 
     
