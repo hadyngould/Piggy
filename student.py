@@ -117,6 +117,7 @@ class Piggy(PiggyParent):
 
     def foward_shimmey(self):
          for x in range(6):
+            self.fwd(2)
             self.right(primary=70, counter=30)
             self.left(primary=70, counter=-30)
             time.sleep(.5)
