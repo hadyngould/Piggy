@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return false # SHUT THE DANCE DOWN
         
-        for x in range(1):
+        for x in range(2):
             self.strut()
             self.right_twist()
             self.strut()
