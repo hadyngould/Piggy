@@ -109,7 +109,7 @@ class Piggy(PiggyParent):
 
     def spinarama(self):
         self.right(primary=-70, counter=-30)
-        time.sleep(1)
+        time.sleep(4)
         self.fwd()
         time.sleep(1)
         self.stop()
