@@ -90,17 +90,19 @@ class Piggy(PiggyParent):
         self.stop()
 
     def strut(self):
+        """Robot is moving foward while looking right to left """
         self.fwd(left=50, right=50)
         for x in range(2):
             self.servo(1000)
             time.sleep(.1) 
-            self.servo(1500)
+            self.servo(1500) # Look Straight
             time.sleep(1)
             self.servo(2000)
             time.sleep(.1)
             self.servo(1500)
 
     def backward_shimmey(self):
+        """Robot is moving backwards while moving his body left and right"""
         for x in range(6):
             self.right(primary=-70, counter=-30)
             time.sleep(.5)
@@ -109,6 +111,8 @@ class Piggy(PiggyParent):
         self.stop()
 
     def spinarama(self):
+        """Robot moves in a circle to turn around and move forward"""
+        for x in range(6):
         self.right(primary=-100, counter=-500)
         time.sleep(3.5)
         self.fwd()
@@ -116,6 +120,7 @@ class Piggy(PiggyParent):
         self.stop()
 
     def foward_shimmey(self):
+        """Robot moves forward while moving his body left and right"""
         for x in range(6):
             self.right(primary=60, counter=30)
             time.sleep(.5)
