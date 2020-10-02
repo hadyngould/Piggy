@@ -113,11 +113,11 @@ class Piggy(PiggyParent):
     def spinarama(self):
         """Robot moves in a circle to turn around and move forward"""
         for x in range(6):
-        self.right(primary=-100, counter=-500)
-        time.sleep(3.5)
-        self.fwd()
-        time.sleep(1)
-        self.stop()
+            self.right(primary=-100, counter=-500)
+            time.sleep(3.5)
+            self.fwd()
+            time.sleep(1)
+            self.stop()
 
     def foward_shimmey(self):
         """Robot moves forward while moving his body left and right"""
