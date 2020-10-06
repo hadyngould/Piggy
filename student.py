@@ -21,7 +21,7 @@ class Piggy(PiggyParent):
         self.RIGHT_DEFAULT = 84
         self.MIDPOINT = 1600
         self.SAFE_DISTANCE = 250        
-        self.CLOSE_DISTANCE = 1600 
+        self.CLOSE_DISTANCE = 30 
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
         
@@ -186,7 +186,7 @@ class Piggy(PiggyParent):
         # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
         self.fwd()
         while True:  
-            if self.read_distance() < self.SAFE_DISTANCE: 
+            if self.read_distance() < self.CLOSE_DISTANCE: 
                 self.stop()
                 print("UH OH! this is jus an absolute send")
                 self.turn_by_deg(90)
