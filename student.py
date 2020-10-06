@@ -187,18 +187,18 @@ class Piggy(PiggyParent):
         self.fwd()
         while True:  
             if self.read_distance() < self.SAFE_DISTANCE: 
-            self.stop()
-            print("UH OH! this is jus an absolute send")
-            self.turn_by_deg(90)
-            time.sleep(.1)
-        else:
-            slef.fwd()
-        time.sleep(.01)
-    self.stop()
-    # TODO: scan so we can decide left or right
-    # TODO: average the right side of the scan dict
-    # TODO: average the left side of the scan dict
-        
+                self.stop()
+                print("UH OH! this is jus an absolute send")
+                self.turn_by_deg(90)
+                time.sleep(.1)
+            else:
+                self.fwd()
+            time.sleep(.01)
+        self.stop()
+        # TODO: scan so we can decide left or right
+        # TODO: average the right side of the scan dict
+        # TODO: average the left side of the scan dict
+            
 
 
 ###########
