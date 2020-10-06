@@ -17,7 +17,7 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 86
+        self.LEFT_DEFAULT = 87
         self.RIGHT_DEFAULT = 84
         self.MIDPOINT = 1600
         self.SAFE_DISTANCE = 250        
