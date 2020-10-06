@@ -19,6 +19,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 84
         self.RIGHT_DEFAULT = 85
+        self.MIDPOINT = 1500
         self.SAFE_DISTANCE = 300
         self.CLOSE_DISTANCE = 1600 
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
