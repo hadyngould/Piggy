@@ -18,9 +18,9 @@ class Piggy(PiggyParent):
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
         self.LEFT_DEFAULT = 84
-        self.RIGHT_DEFAULT = 85
+        self.RIGHT_DEFAULT = 84
         self.MIDPOINT = 1600
-        self.SAFE_DISTANCE = 300
+        self.SAFE_DISTANCE = 250        
         self.CLOSE_DISTANCE = 1600 
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
@@ -184,13 +184,20 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
         # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
-        while self.read_distance() > 250:  # TODO: fix this magic number
-            self.fwd()
-            time.sleep(.01)
-        self.stop()
-        # TODO: scan so we can decide left or right
-        # TODO: average the right side of the scan dict
-        # TODO: average the left side of the scan dict
+        self.fwd()
+        while True:  
+            if self.read_distance() < self.SAFE_DISTANCE: 
+            self.stop()
+            print("UH OH! this is jus an absolute send")
+            self.turn_by_deg(90)
+            time.sleep(.1)
+        else:
+            slef.fwd()
+        time.sleep(.01)
+    self.stop()
+    # TODO: scan so we can decide left or right
+    # TODO: average the right side of the scan dict
+    # TODO: average the left side of the scan dict
         
 
 
