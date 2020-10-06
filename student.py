@@ -17,11 +17,11 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 88
+        self.LEFT_DEFAULT = 87
         self.RIGHT_DEFAULT = 84
         self.MIDPOINT = 1600
         self.SAFE_DISTANCE = 250        
-        self.CLOSE_DISTANCE = 30 
+        self.CLOSE_DISTANCE = 40 
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
         
