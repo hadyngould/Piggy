@@ -188,7 +188,7 @@ class Piggy(PiggyParent):
         # if the three-part check didn't freak out
         return True
 
-    def turn_until_clear():
+    def turn_until_clear(self):
         """ Rotateb right until no obstacle is seen """
         print("Turning until clear")
         # make sure we're looking straight
@@ -218,7 +218,7 @@ class Piggy(PiggyParent):
                 time.sleep(.1)
             else:
                 self.fwd()
-                
+
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
         # TODO: average the left side of the scan dict
