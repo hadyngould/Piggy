@@ -193,8 +193,8 @@ class Piggy(PiggyParent):
         print("Turning until clear")
         # make sure we're looking straight
         self.servo(self.MIDPOINT)
-        while self.read_distance < self.SAFE_DISTANCE:
-            self.left(PRIMARY=40, COUNTER=-40)
+        while self.read_distance() < self.SAFE_DISTANCE:
+            self.left(primary=40, counter=-40)
             time.sleep(.05)
         # stop motion before we end the method
         self.stop()
