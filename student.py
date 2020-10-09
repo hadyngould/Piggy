@@ -181,10 +181,23 @@ class Piggy(PiggyParent):
         pass
         # do a scan of the area in front of the robot
         self.scan()
-        # print the results
+
+    
+        see_an_object = False
+        count = 0 
+
         for angle in self.scan_data:
             dist = self.scan_data[angle]
-            print("ANGLE: %d | DIST: %d" % (angle, dist)) 
+            if dist < self.SAFE_DISTANCE and not see_an_object: 
+                see_an_object = True
+                count += 1
+                print("~~~ I SEE SOMETHING!! ~~~")
+            elif dist > self.SAFE_DISTANCE and see_an_object:
+                see_an_object = False
+                print("I guess the object ended")
+
+                print("ANGLE: %d | DIST: %d" % (angle, dist))
+        print("\nI saw %d objects" % count) 
 
 
 
