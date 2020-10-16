@@ -184,7 +184,7 @@ class Piggy(PiggyParent):
         right_avg = 0
         left_sum = 0
         left_avg = 0
-
+        self.scan()
         for angle in self.scan_data:
             if angle < self.MIDPOINT:
                 right_sum += self.scan_data[angle]
@@ -196,10 +196,10 @@ class Piggy(PiggyParent):
             left_avg = left_sum / left_avg 
             right_avg = right_sum / right_avg
 
-            if left_avg > right_avg: 
-                return 'l' 
-            else:
-                return 'r'
+        if left_avg > right_avg: 
+            return 'l' 
+        else:
+            return 'r'
 
 
 
