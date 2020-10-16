@@ -271,12 +271,12 @@ class Piggy(PiggyParent):
             if not self.quick_check(): 
                 self.stop()
                 # self.turn_until_clear()
-                    if 'l' in self.right_or_left():
-                        self.turn_by_deg(-45)
-                    else: 
-                        self.turn_by_deg(45)
-                else:
-                    self.fwd()
+                if 'l' in self.right_or_left():
+                    self.turn_by_deg(-45)
+                else: 
+                    self.turn_by_deg(45)
+            else:
+                self.fwd()
 
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
