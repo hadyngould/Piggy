@@ -175,7 +175,8 @@ class Piggy(PiggyParent):
             self.scan_data[angle] = self.read_distance()
         #sort the scan data for easier analysis
         self.scan_data = OrderedDict(sorted(self.scan_data.items()))
-
+    
+    # Robot will turn right or left based on data taken
     def right_or_left(self):
         """ Should I turn left or right?
                 Returns a 'r' or 'l' baseed on scan data""" 
@@ -218,7 +219,7 @@ class Piggy(PiggyParent):
         
             see_an_object = False
             count = 0 
-
+        # Do a scan and count the amount of objects in the way
             for angle in self.scan_data:
                 dist = self.scan_data[angle]
                 if dist < self.SAFE_DISTANCE and not see_an_object: 
