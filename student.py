@@ -269,8 +269,9 @@ class Piggy(PiggyParent):
 
         while True:  
             if not self.quick_check(): 
-                self.stop()
-                self.back(.5)
+                #self.stop()
+                self.back()
+                time.sleep(.5)
                 self.stop()
                 # self.turn_until_clear()
                 if 'l' in self.right_or_left():
