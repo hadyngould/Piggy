@@ -266,17 +266,15 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
       
-
+        exit_ang = self.get_heading()
         while True:  
             if not self.quick_check(): 
                 self.stop()
                 self.back()
                 time.sleep(.5)
                 self.stop()
-                if 'l' in self.right_or_left():
-                    self.turn_by_deg(-45)
-                else: 
-                    self.turn_by_deg(45)
+                self.turn_to_get(exit_ang)
+                self.turn_until_clear() # biased toward one side
             else:
                 self.fwd(right = 100, left = 100)
 
