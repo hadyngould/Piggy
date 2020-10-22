@@ -279,7 +279,7 @@ class Piggy(PiggyParent):
                 else: 
                     self.turn_by_deg(45)
             else:
-                self.fwd(Right=100, Left=100)
+                self.fwd(Right = 100, Left = 100)
 
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
