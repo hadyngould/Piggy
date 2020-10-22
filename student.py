@@ -273,7 +273,7 @@ class Piggy(PiggyParent):
                 self.back()
                 time.sleep(.5)
                 self.stop()
-                self.turn_to_get(exit_ang)
+                self.turn_to_ang(exit_ang)
                 self.turn_until_clear() # biased toward one side
             else:
                 self.fwd(right = 100, left = 100)
