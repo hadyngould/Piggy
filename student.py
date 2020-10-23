@@ -255,6 +255,7 @@ class Piggy(PiggyParent):
             self.left(primary=40, counter=-40)
             time.sleep(.05)
         # stop motion before we end the method
+        self.turn_by_deg(25)
         self.stop()
 
 
